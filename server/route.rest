@@ -1,0 +1,66 @@
+POST http://localhost:5000/user/register
+Content-Type: application/json
+
+{
+    "fullname":"koribeche amir",
+    "email":"amir7@gmail.com",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:5000/user/login
+Content-Type: application/json
+
+{
+    "email":"amir5@gmail.com",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:5000/annonce
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWYzYzI1YWQwMTAzZjdhNzAzY2UwMSIsImlhdCI6MTY1NDY5NDU4NX0.HQ6vshdOxaldIG-042KidKKOUeblKKl68dmfD-fecUc
+
+{
+    "nom":"nouvelle basquette",
+    "prix":60,
+    "description":"basquette nike",
+    "photo":"lien vers la photo",
+    "qteDispo":40
+}
+
+###
+
+GET http://localhost:5000/annonce
+
+###
+
+GET http://localhost:5000/annonce/62a049b29d27684512f425ff
+
+
+###
+
+DELETE http://localhost:5000/annonce/62a08f1df5f39d02bed74661
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWYzYzI1YWQwMTAzZjdhNzAzY2UwMSIsImlhdCI6MTY1NDY5NDU4NX0.HQ6vshdOxaldIG-042KidKKOUeblKKl68dmfD-fecUc
+
+###
+
+PUT http://localhost:5000/annonce/629f67e3f907de2ccb485d3b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWYzYzI1YWQwMTAzZjdhNzAzY2UwMSIsImlhdCI6MTY1NDY5NDU4NX0.HQ6vshdOxaldIG-042KidKKOUeblKKl68dmfD-fecUc
+
+{
+    "nom":"veste",
+    "prix":160,
+    "description":"veste en cuire",
+    "photo":"lien vers la photo",
+    "qteDispo":40
+}
+
+###
+
+GET http://localhost:5000/annonce/getAnnonceUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWYzYzI1YWQwMTAzZjdhNzAzY2UwMSIsImlhdCI6MTY1NDY5NDU4NX0.HQ6vshdOxaldIG-042KidKKOUeblKKl68dmfD-fecUc
+
